@@ -25,3 +25,45 @@ ul {
     grid-auto-rows: minmax(125px, auto);
     grid-gap: .5rem; 
 }
+
+.boxes li {
+    background-image: 
+        linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)),
+        url(https://i.imgur.com/uyqfPwv.jpg);
+    background-size: cover;     
+    display: flex; 
+    align-items: flex-end; 
+}
+
+@media screen and (min-width: 40em) {
+    .boxes {
+        grid-template-columns: repeat(6, 1fr); 
+        grid-gap: 2px; 
+    }
+    
+    .boxes li:nth-child(1) {
+        grid-column: 1 / -1; 
+        grid-row: span 2;         
+    }
+
+    .boxes li:nth-child(2) {
+        grid-column: span 2; 
+        grid-row: span 3; 
+    }
+
+    .boxes li:nth-child(3) {
+        grid-column: span 4; 
+        grid-row: span 1;          
+    }
+
+    .boxes li:nth-child(4) {
+        grid-column: span 2; 
+        grid-row: span 2; 
+    }
+
+    .boxes li:nth-child(5), 
+    .boxes li:nth-child(6) {
+        grid-column: span 2; 
+        grid-row: span 1; 
+    }
+}
